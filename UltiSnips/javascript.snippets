@@ -3,7 +3,7 @@ snippet rrcc "React Redux Class Component" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import styles from './${2:$1}.css';
+import './${2:$1}.css';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
@@ -35,7 +35,7 @@ endsnippet
 snippet rcc "React Class Component" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './${2:$1}.css';
+import './${2:$1}.css';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
@@ -62,9 +62,9 @@ endsnippet
 snippet rfc "React Functional Component" b
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './${2:$1}.css';
+import './${2:$1}.css';
 
-function ${1:`!v expand('%:t:r')`}({ $3 }) {
+const ${1:`!v expand('%:t:r')`} = ({ $3 }) => {
 	return (
 		<${5:div} className={styles.base}>
 			$0
