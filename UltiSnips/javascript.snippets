@@ -3,7 +3,7 @@ snippet rrcc "React Redux Class Component" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './${2:$1}.css';
+import './${2}.css';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
@@ -18,7 +18,7 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 
 	render() {
 		return (
-			<div className={styles.base}>
+			<div className="${3:$2}">
 				$3
 			</div>
 		);
@@ -35,7 +35,7 @@ endsnippet
 snippet rcc "React Class Component" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './${2:$1}.css';
+import './${2}.css';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
@@ -62,11 +62,11 @@ endsnippet
 snippet rfc "React Functional Component" b
 import React from 'react';
 import PropTypes from 'prop-types';
-import './${2:$1}.css';
+import './${2}.css';
 
 const ${1:`!v expand('%:t:r')`} = ({ $3 }) => {
 	return (
-		<${5:div} className={styles.base}>
+		<${5:div} className="${3:$2}">
 			$0
 		</$5>
 	);
