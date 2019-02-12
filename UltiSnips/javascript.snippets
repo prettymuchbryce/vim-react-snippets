@@ -18,7 +18,7 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 
 	render() {
 		return (
-			<div className="${3:$2}">
+			<div className="component-${3:$2}">
 				$3
 			</div>
 		);
@@ -39,7 +39,7 @@ import './${2}.css';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
-		${2:children: PropTypes.node,
+		${4:children: PropTypes.node,
 		className: PropTypes.string,}
 	};
 
@@ -49,7 +49,7 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 
 	render() {
 		return (
-			<${3:div} className={styles.base}>
+			<${3:div} className="component-${5:$2}">
 				$0
 			</$3>
 		);
@@ -66,7 +66,7 @@ import './${2}.css';
 
 const ${1:`!v expand('%:t:r')`} = ({ $3 }) => {
 	return (
-		<${5:div} className="${3:$2}">
+		<${5:div} className="component-${3:$2}">
 			$0
 		</$5>
 	);
@@ -83,28 +83,6 @@ if props:
     snip += prop + ': PropTypes.any,'
 `
 };
-
-export default $1;
-endsnippet
-
-snippet rsc "React Styled Component" b
-import styled from 'styled-components';
-
-const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`
-	$3
-\`;
-
-export default $1;
-endsnippet
-
-snippet rsci "React Styled Component Interpolation" b
-import styled, { css } from 'styled-components';
-
-const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`${props => css\`
-	${3:${props.$4 && \`
-		$5
-	\`}}
-\`}\`;
 
 export default $1;
 endsnippet
